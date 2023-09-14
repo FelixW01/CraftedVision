@@ -11,7 +11,6 @@
 2. [Usage](#usage)
 3. [Credits](#credits)
 4. [Questions](#questions)  
-5. [License](#license)
 
 
 ## Installation
@@ -33,10 +32,3 @@ Screenshot of :
 ## Questions
 
 
-
-## License
-
-Please refer to the LICENSE section in the repository.
-
-
----
