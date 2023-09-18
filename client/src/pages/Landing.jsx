@@ -1,6 +1,18 @@
+import { Button, Typography } from 'antd';
+
+const { Paragraph } = Typography;
+
+
 function Landing() {
   return (
-    <h1 className="page-title">Landing</h1>
+    <>
+    <section>
+      <div>
+        <Paragraph>CraftedVisions</Paragraph>
+        <Button>Get Started</Button>
+      </div>
+    </section>
+    </>
   )
 }
 

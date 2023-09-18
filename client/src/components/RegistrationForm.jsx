@@ -98,7 +98,7 @@ export default function Registration() {
         <p>
           Already have an account? Login
           {' '}
-          <Link to="/register">here</Link>
+          <Link to="/login">here</Link>
         </p>
       </form>
     </>
