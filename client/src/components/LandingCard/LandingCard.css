@@ -16,3 +16,8 @@
 .logo {
   max-width: 80%;
 }
+
+.start-btn {
+  background-color: var(--light);
+  color: var(--dark);
+}
