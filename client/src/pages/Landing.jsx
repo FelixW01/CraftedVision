@@ -1,6 +1,9 @@
+import LandingCard from '../components/LandingCard/LandingCard';
+
+
 function Landing() {
   return (
-    <h1 className="page-title">Landing</h1>
+    <LandingCard />
   )
 }
 
