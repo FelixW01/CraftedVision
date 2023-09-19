@@ -1,10 +1,15 @@
 import './LandingCard.css';
 import { Button, Typography } from 'antd';
+import { useNavigate } from 'react-router-dom';
 
 const { Paragraph } = Typography;
 
-
 function LandingCard() {
+const navigate = useNavigate()
+function handleClick() {
+    navigate('/register')
+  }
+
   return (
     <>
     <section className="landing">
@@ -18,7 +23,7 @@ function LandingCard() {
       </div>
 
       <div className="landing-div">
-        <Button>Get Started</Button>
+        <Button type='primary' shape='round' onClick={handleClick} className="start-btn">Get Started</Button>
       </div>
 
     </section>
