@@ -1,10 +1,17 @@
+:root {
+  --dark: #2d2d2d;
+  --light: #ffffff;
+}
+
 html,
 body {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   min-height: 100vh;
   min-height: 100dvh;
   padding: 0;
   margin: 0;
+  color: var(--light);
 }
 
 #root {
@@ -22,19 +29,20 @@ nav {
   padding: 0.5rem;
 }
 
-nav>a,
-nav>button {
+nav > a,
+nav > button {
   margin-left: 1rem;
   text-decoration: none;
 }
 
 main {
   flex-grow: 1;
+  background-color: var(--dark);
 }
 
 footer {
   height: 50px;
-  background-color: lightgray;
+  background-color: var(--dark);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,10 +61,10 @@ button {
   color: #212529;
   text-align: center;
   border: 1px solid transparent;
-  padding: .375rem .75rem;
+  padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   color: #fff;
   background-color: #007bff;
 }
@@ -74,4 +82,9 @@ button {
 
 .page-title {
   text-align: center;
+}
+
+.ant-typography {
+  color: var(--light);
+  margin: 0;
 }

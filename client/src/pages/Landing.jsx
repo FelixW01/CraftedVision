@@ -1,18 +1,9 @@
-import { Button, Typography } from 'antd';
-
-const { Paragraph } = Typography;
+import LandingCard from '../components/LandingCard/LandingCard';
 
 
 function Landing() {
   return (
-    <>
-    <section>
-      <div>
-        <Paragraph>CraftedVisions</Paragraph>
-        <Button>Get Started</Button>
-      </div>
-    </section>
-    </>
+    <LandingCard />
   )
 }
 
