@@ -8,7 +8,7 @@ import { useCurrentUserContext } from '../../context/CurrentUser';
   return (
     <nav className="navbar">
     <div>
-      <Link className="nav-link" to="/"><img src="images/logo.png" className="logo-img"></img></Link>
+      <Link to="/"><img src="images/logo.png" className="logo-img"></img></Link>
     </div>
       {isLoggedIn() ? (
         <>
