@@ -7,11 +7,13 @@ CraftedVision is a versatile App where users can post their works, pictures and 
 
 
 ## Table of Contents
-1. [Installation](#installation)
-2. [Usage](#usage)
-3. [Credits](#credits)
-4. [Questions](#questions)  
+1. [Demo](#demo)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Credits](#credits)
+5. [Questions](#questions)  
 
+## Demo
 
 ## Installation
 
