@@ -2,33 +2,38 @@ import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { LOGIN_USER } from '../graphql/mutations';
+import { REGISTER_USER } from '../../graphql/mutations';
 
-import { useCurrentUserContext } from '../context/CurrentUser';
+import { useCurrentUserContext } from '../../context/CurrentUser';
 
-export default function Login() {
+export default function Registration() {
   const { loginUser } = useCurrentUserContext();
   const navigate = useNavigate();
   const [formState, setFormState] = useState({
+    firstName: '',
+    lastName: '',
     email: '',
     password: ''
   });
 
-  const [login, { error }] = useMutation(LOGIN_USER);
+  const [register, { error }] = useMutation(REGISTER_USER);
 
   const handleFormSubmit = async event => {
     event.preventDefault();
     try {
-      const mutationResponse = await login({
+      const mutationResponse = await register({
         variables: {
+          firstName: formState.firstName,
+          lastName: formState.lastName,
           email: formState.email,
-          password: formState.password
+          password: formState.password,
         },
       });
-      const { token, user } = mutationResponse.data.login;
+      const { token, user } = mutationResponse.data.register;
       loginUser(user, token);
       navigate('/dashboard');
     } catch (e) {
+    // eslint-disable-next-line no-console
       console.log(e);
     }
   };
@@ -45,8 +50,28 @@ export default function Login() {
           <p className="error-text">The provided credentials are incorrect</p>
         </div>
       ) : null}
-      <form id="login-form" onSubmit={handleFormSubmit}>
-        <h2>Login</h2>
+      <form id="registration-form" onSubmit={handleFormSubmit}>
+        <h2>Register</h2>
+        <label htmlFor="firstName">
+          First name:
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            value={formState.firstName}
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="lastName">
+          Last name:
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            value={formState.lastName}
+            onChange={handleChange}
+          />
+        </label>
         <label htmlFor="email">
           Email:
           <input
@@ -68,12 +93,12 @@ export default function Login() {
           />
         </label>
         <button type="submit">
-          Login
+          Sign Up
         </button>
         <p>
-          Need an account? Sign up
+          Already have an account? Login
           {' '}
-          <Link to="/register">here</Link>
+          <Link to="/login">here</Link>
         </p>
       </form>
     </>
