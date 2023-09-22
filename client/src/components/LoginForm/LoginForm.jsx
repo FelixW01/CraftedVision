@@ -21,7 +21,7 @@ export default function Login() {
   const [form] = Form.useForm();
   const [login, { error }] = useMutation(LOGIN_USER);
 
-  const handleFormSubmit = async event => {
+  const handleFormSubmit = async () => {
     
     try {
       const formValues = await form.validateFields();
@@ -93,11 +93,11 @@ export default function Login() {
           <p className="error-text"><Text type='danger'>The provided credentials are incorrect </Text></p>
         </div>
       ) : null}
-        <Button htmlType='submit' type='primary'>
+        <Button className='submit-btn' htmlType='submit' type='primary'>
           Login
         </Button>
-        <Paragraph>
-          Need an account? Sign up
+        <Paragraph className='paragraph-text'>
+          Need an account? Sign Up
           {' '}
           <Link to="/register">here</Link>
         </Paragraph>
