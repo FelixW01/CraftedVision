@@ -71,17 +71,6 @@ button {
   background-color: #007bff;
 }
 
-#login-form,
-#registration-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 30rem;
-  margin: 3rem auto;
-  padding: 1.5rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-
 .page-title {
   text-align: center;
 }

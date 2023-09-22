@@ -5,3 +5,9 @@
   max-width: 30rem;
   margin: 3rem auto;
 }
+.paragraph-text {
+  color: var(--dark);
+}
+.submit-btn {
+  background-color: var(--dark);
+}
