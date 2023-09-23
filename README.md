@@ -21,15 +21,8 @@ CraftedVision is a versatile App where users can post their works, pictures and 
 ## Usage
 
 
-
-The following screenshots are of 
-
-Screenshot of :
-![Screenshot of ]()
-
-
 ## Credits:
-
+Felix Willem
 
 ## Questions
 
