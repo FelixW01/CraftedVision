@@ -9,12 +9,11 @@ import { useCurrentUserContext } from '../../context/CurrentUser';
     <nav className="navbar">
     <div>
       <Link to={isLoggedIn() ? "/dashboard" : "/"}>
-      <img src="images/logo.png" className={isLoggedIn() ? "logo-img2" : "logo-img"}></img>
+      <img src="images/logo.png" className="logo-img"></img>
       </Link>
     </div>
       {isLoggedIn() ? (
         <>
-          <Link className="nav-link" to="/dashboard">Dashboard</Link>
           <Link className="nav-link" onClick={logoutUser}>Logout</Link>
         </>
       ) : (

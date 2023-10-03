@@ -1,6 +1,10 @@
+import DashboardCards from "../components/DashboardCards"
+
 function Dashboard() {
   return (
-    <h1 className="page-title">Dashboard</h1>
+    <>
+      <DashboardCards/>
+    </> 
   )
 }
 
